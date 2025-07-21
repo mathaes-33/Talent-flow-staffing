@@ -57,7 +57,7 @@ const ResourceContent: React.FC<ResourceContentProps> = ({ title, description, a
         {error && <p className="mt-4 text-sm text-destructive font-medium">{error}</p>}
 
         {content && (
-          <div className="mt-4 prose prose-sm max-w-none text-muted-foreground whitespace-pre-wrap animate-fade-in">
+          <div className="mt-4 text-muted-foreground whitespace-pre-wrap animate-fade-in">
             {content}
           </div>
         )}
