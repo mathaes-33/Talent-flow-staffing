@@ -90,12 +90,12 @@ const AdminDashboard: React.FC<AdminDashboardProps> = ({ jobs, onJobStatusUpdate
                             </div>
                             <div className="md:col-span-2">
                                 {selectedJob && selectedJob.status === 'pending' ? (
-                                    <Card className="sticky top-24">
+                                    <Card className="sticky top-24 max-h-[calc(100vh-8rem)] flex flex-col">
                                         <CardHeader>
                                             <CardTitle>{selectedJob.jobTitle}</CardTitle>
                                             <CardDescription>{selectedJob.company} - {selectedJob.location}</CardDescription>
                                         </CardHeader>
-                                        <CardContent className="space-y-4">
+                                        <CardContent className="space-y-4 overflow-y-auto">
                                             <p className="text-sm text-muted-foreground whitespace-pre-wrap">{selectedJob.description}</p>
                                             {selectedJob.analysis && (
                                                 <div className="bg-slate-50 p-4 rounded-md space-y-2">
